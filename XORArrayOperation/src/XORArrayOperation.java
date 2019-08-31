@@ -44,20 +44,7 @@ class XORArrayOperation{
 		
 		int[] a = {3,4,5};
 		
-		if ((a.length & 1) == 0) {
-            System.out.println(0);
-            return;
-        }
-        int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            if ((i & 1) == 0) {
-//            	System.out.print(i + " ");
-            	sum ^= a[i];
-                //System.out.print(i + " ");
-            }
-            System.out.print(((i & 1)) + " ");
-        }
-        System.out.println("\n" + sum);
+		System.out.println(XORNumber(a));
 		
 		
         
@@ -102,6 +89,25 @@ class XORArrayOperation{
 // 		
 // 		System.out.println(re);
 
+	}
+	
+	public static int XORNumber(int[] a) {
+		if ((a.length & 1) == 0) {
+//            System.out.println(0);
+			return 0;
+		}
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			if ((i & 1) == 0) {
+//            	System.out.print(i + " ");
+				sum ^= a[i];
+				// System.out.print(i + " ");
+			}
+//            System.out.print(((i & 1)) + " ");
+		}
+//        System.out.println("\n" + sum);
+
+		return sum;
 	}
 }
 
